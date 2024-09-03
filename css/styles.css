@@ -6,6 +6,35 @@
  *
  */
 
+:root
+{
+    /* Fonts */
+    --regular-font:"Arial"
+
+    --font-size-large:24px;
+    --font-size-medium:18px;
+    --font-size-small:12px;
+
+    /*colors */
+    --dark-brown: #402214;
+    --lighter-brown:  #774231;
+    --lightest-brown: #aa4b1b;
+
+    --darker-red: #b31714;
+    --lighter-red: #dc3439;
+
+    --white: #FFF;
+    --black: #000;
+
+    /* sizes */
+    --window-width: 1000px;
+    --window-height: 700px;
+
+    --square-large: 500px;
+    --square-medium: 300px;
+    --square-small: 100px;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -13,7 +42,7 @@ html, body {
 
 a 
 {
-    font-size: 22px;
+    font-size: var(--font-size-medium);
     color: #F0F;
 }
 
@@ -38,12 +67,12 @@ a:active
 }
 
 .red-square {
-    width: 80px;
-    height: 80px;
-    color: #FFF;
+    width: var(--square-small);
+    height: var(--square-small);
+    color: var(--white);
     padding: 20px;
     margin: 10px;
-    font-size: 14px;
+    font-size: var(--font-size-medium);
     background-color: rgba(255,0,0,0.4);
     display: inline-block;
 }
@@ -58,9 +87,9 @@ a:active
 
 .cascading-child
 {
-    background-color: #000 ;
-    width: 200px;
-    height: 200px;
+    background-color: var(--black) ;
+    width: var(--square-medium);
+    height: var(--square-medium);
     animation: blackToWhite 5s infinite alternate;
 }
 
@@ -70,7 +99,7 @@ a:active
 }
 
 .cascading-parent a {
-    font-size: 32px;
+    font-size: var(--font-size-large);
     color: #CCC;
 }
 
@@ -88,13 +117,13 @@ a:active
 .site-font
 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: var(--font-size-large);
 }
 
 .site-color
 {
     background-color: cyan;
-    color:#000
+    color:var(--black)
 }
 
 .site-secondary-color
@@ -105,23 +134,23 @@ a:active
 
 .site-square
 {
-    width:200px;
-    height:200px;
+    width:var(--square-medium);
+    height:var(--square-medium);
 }
 
 .site-image
 {
     background-image: url("https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F2RNK1P0BYVrSCZEy_Sd1Ew%252F3417757448_4a6bdf36ce_o.jpg&width=910");
     animation: fadeInImage 3s;
-    height:720px;
-    width: 900px;
+    height:var(--window-height);
+    width: var(--window-width);
 }
 
 #person
 {
     background-image: url("https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png");
-    width: 300px;
-    height: 300px;
+    width: var(--square-medium);
+    height: var(--square-medium);
     text-transform: uppercase;
     position: relative;
     animation: myMove 5s infinite;
@@ -135,8 +164,8 @@ a:active
 
 @keyframes blackToWhite
 {
-    from{background-color: #000;}
-    to{background-color:#fff;}
+    from{background-color: var(--black);}
+    to{background-color:var(--white);}
 }
 
 @keyframes fadeInImage
