@@ -38,15 +38,16 @@
 html, body {
     margin: 0;
     padding: 0;
+    height:100%;
 }
 
-a 
+/*a 
 {
     font-size: var(--font-size-medium);
     color: #F0F;
 }
 
-a:link
+/*a:link
 {
     color:red;
 }
@@ -64,8 +65,48 @@ a:hover
 a:active
 {
     color: blue;
+}*/
+
+.button-container
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.button-container a
+{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    color: var(--white);
+    background-color: red;
+
+    /* ROUNDING THE CORNERS */
+    border-radius: 10px;
+    
+    /* CREATED WITH THE SHADOW GENERATOR */
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+
+    text-decoration:none;
+
+    transition: all 0.5s ease;
+}
+
+.button-container a:hover
+{
+    background-color: var(--darker-red);
+    text-decoration:none;
+}
+
+/*
 .red-square {
     width: var(--square-small);
     height: var(--square-small);
@@ -83,7 +124,7 @@ a:active
     color: #4ed2e774;
     width:300px;
     background-color: #d81111 !important;
-} */
+} 
 
 .cascading-child
 {
@@ -173,3 +214,4 @@ a:active
     from{opacity: 0;}
     to{opacity: 100;}
 }
+*/
