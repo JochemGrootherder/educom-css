@@ -1,4 +1,4 @@
-#CSS Repository Jochem Grootherder
+# CSS Repository Jochem Grootherder
 
 This repository contains the learning traject of the things I learned from Educom. During this traject I learned the following about css:
 * Inline styles
