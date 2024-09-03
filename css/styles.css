@@ -11,6 +11,32 @@ html, body {
     padding: 0;
 }
 
+a 
+{
+    font-size: 22px;
+    color: #F0F;
+}
+
+a:link
+{
+    color:red;
+}
+
+a:visited
+{
+    color:purple;
+}
+
+a:hover
+{
+    color:yellow;
+}
+
+a:active
+{
+    color: blue;
+}
+
 .red-square {
     width: 80px;
     height: 80px;
@@ -36,12 +62,6 @@ html, body {
     width: 200px;
     height: 200px;
     animation: blackToWhite 5s infinite alternate;
-}
-
-a 
-{
-    font-size: 22px;
-    color: #F0F;
 }
 
 .cascading-parent h2
