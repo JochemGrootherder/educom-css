@@ -22,13 +22,13 @@ html, body {
     display: inline-block;
 }
 
-.cascading-parent
+/* .cascading-parent
 {
     font-weight: bold;
     color: #4ed2e774;
     width:300px;
     background-color: #d81111 !important;
-}
+} */
 
 .cascading-child
 {
@@ -37,6 +37,35 @@ html, body {
     height: 200px;
     animation: blackToWhite 5s infinite alternate;
 }
+
+a 
+{
+    font-size: 22px;
+    color: #F0F;
+}
+
+.cascading-parent h2
+{
+    color: #FD0;
+}
+
+.cascading-parent a {
+    font-size: 32px;
+    color: #CCC;
+}
+
+.cascading-parent .cascading-child
+{
+    background-color: #0F0;
+    animation: none;
+}
+
+.cascading-child a
+{
+    color:#00f;
+}
+
+
 
 
 #person
