@@ -1,11 +1,10 @@
 .menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    float: right;
+    padding: 20px;
 }
 
 .menu-trigger {
-    background-color: #F00;
+    background-color: var(--mint);
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -26,8 +25,8 @@
     top: -400px;
     left: 0;
     right: 0;
-    height: 200px;
+    height: 100px;
+    width: var(--window-width);
     background-color: #FDF;
     transition: all 0.4s ease;
-    padding: 40px;
 }
