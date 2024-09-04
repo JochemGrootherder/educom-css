@@ -13,7 +13,9 @@
     --window-height: 600px;
 
     --content-block-size: 200px;
-    --content-block-size-hover: 220px;
+
+    --default-margin: 20px;
+    --default-icon-size: 40px;
 
     /* colors */
     --black: #000;
@@ -69,9 +71,9 @@ footer a:active
 .logo
 {
     float:left;
-    padding: 20px;
-    width: 40px;
-    height: 40px;
+    padding: var(--default-margin);
+    width: var(--default-icon-size);
+    height: var(--default-icon-size);
 }
 
 .content
@@ -85,27 +87,25 @@ footer a:active
 {
     width: var(--content-block-size);
     height: var(--content-block-size);
-    margin: 20px;
     display: flex;
+    margin: var(--default-margin);
     justify-content: center;
     align-items: center;
     background-color: darkslategray;
+}
+
+.item-container:hover
+{
+    filter: grayscale(40);
+    margin: var(--default-margin);
+    transform: scale(1.1);
+    transition: all 1s ease;
 }
 
 .item-container-background-image
 {
     width: var(--content-block-size);
     height: var(--content-block-size);
-    filter: grayscale(0);
-}
-
-.item-container-background-image:hover
-{
-    width: var(--content-block-size-hover);
-    height: var(--content-block-size-hover);
-    filter: grayscale(40);
-    
-    transition: all 1s ease;
 }
 
 .item-container-content
@@ -117,13 +117,13 @@ footer a:active
 
 .socials-logo
 {
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
+    width: var(--default-icon-size);
+    height: var(--default-icon-size);
+    margin-left: var(--default-margin);
 }
 
 .footer-contact-us
 {
     margin-left:auto;
-    margin-right: 20px;
+    margin-right: var(--default-margin);
 }
