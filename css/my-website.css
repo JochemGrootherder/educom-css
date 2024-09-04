@@ -3,6 +3,7 @@
     /* fonts */
     --regular-font: "Arial, Helvetica, sans-serif";
     
+    --font-size-extra-large: 32px;
     --font-size-large:24px;
     --font-size-medium:18px;
     --font-size-small:12px;
@@ -12,6 +13,7 @@
     --window-height: 600px;
 
     --content-block-size: 200px;
+    --content-block-size-hover: 220px;
 
     /* colors */
     --black: #000;
@@ -31,18 +33,38 @@ html, body {
 
 header
 {
-    height: 80px;
-    background-color: var(--light-blue);
+    height: 150px;
 }
 
 footer
 {
     height: 80px;
-    background-color: var(--light-blue);
+    background-color: lightgray;
     display: flex;
     align-items: center;
     width: var(--window-width);
 }
+
+footer a:link
+{
+    color:white;
+}
+
+footer a:visited
+{
+    color:purple;
+}
+
+footer a:hover
+{
+    color:darkgray;
+}
+
+footer a:active
+{
+    color: blue;
+}
+
 
 .logo
 {
@@ -54,7 +76,6 @@ footer
 
 .content
 {
-    background-color:aqua;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,34 +86,33 @@ footer
     width: var(--content-block-size);
     height: var(--content-block-size);
     margin: 20px;
-}
-
-.single-item
-{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--mint);
+    background-color: darkslategray;
 }
 
-.multiple-items
+.item-container-background-image
 {
-    background-color: var(--mint);
-}
-
-.item-list
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     width: var(--content-block-size);
     height: var(--content-block-size);
-    overflow-y: scroll;
+    filter: grayscale(0);
 }
 
-.item-in-list
+.item-container-background-image:hover
 {
-    height: 50px;
+    width: var(--content-block-size-hover);
+    height: var(--content-block-size-hover);
+    filter: grayscale(40);
+    
+    transition: all 1s ease;
+}
+
+.item-container-content
+{
+    position: absolute;
+    font-size: var(--font-size-extra-large);
+    color: var(--white);
 }
 
 .socials-logo
